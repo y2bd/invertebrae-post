@@ -71,8 +71,8 @@ const KeywordDraggable: React.FC<KeywordDraggableProps> = React.memo(props => {
   });
 
   const onDoubleClick = React.useCallback(
-    () => props.onDoubleClick && props.onDoubleClick(props.text),
-    [props.onDoubleClick, props.text]
+    () => !props.consumed && props.onDoubleClick && props.onDoubleClick(props.text),
+    [props.consumed, props.onDoubleClick, props.text]
   );
 
   return (

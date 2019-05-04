@@ -38,7 +38,7 @@ export default function useTyping(
     }
 
     setRenderText(text.slice(0, renderText.length + 1));
-  }, fast ? 0 : delay /* Math.round(delay - 10 + 20 * Math.random()) */);
+  }, fast ? 2 : delay /* Math.round(delay - 10 + 20 * Math.random()) */);
 
   return [renderText];
 }
